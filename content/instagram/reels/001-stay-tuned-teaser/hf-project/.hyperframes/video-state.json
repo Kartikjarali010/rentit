@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "historyId": "5997c013-3eed-435a-b8de-e113da799301",
+  "currentRevision": "4dcbb028-67ea-4512-9cf9-338f216aa879",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a",
+      "content": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/26/268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a"
+    },
+    "CLAUDE.md": {
+      "hash": "268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a",
+      "content": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/26/268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "9ca5f62879ce7a2c23b3ce971ed7e132c6f254f7165c4767dfee701a7f435830",
+      "content": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/9c/9ca5f62879ce7a2c23b3ce971ed7e132c6f254f7165c4767dfee701a7f435830"
+    },
+    "meta.json": {
+      "hash": "db0aa4beb1eca78a0f7938dc66b24bf774e7983386de12c81a7d93d2e618f156",
+      "content": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/db/db0aa4beb1eca78a0f7938dc66b24bf774e7983386de12c81a7d93d2e618f156"
+    },
+    "package.json": {
+      "hash": "dfca7cbcbf77bfd1041d729bf159c13d190ef585db988a315c615f63a7701f88",
+      "content": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/df/dfca7cbcbf77bfd1041d729bf159c13d190ef585db988a315c615f63a7701f88"
+    }
+  },
+  "revisions": {
+    "4dcbb028-67ea-4512-9cf9-338f216aa879": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794732878394,
+      "endedAt": 1794732878395,
+      "files": {
+        "index.html": {
+          "before": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/18/188c48ad1633683a89e63930a5762eb826974633804f1d6bb78d13a9740e533c",
+          "after": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/9c/9ca5f62879ce7a2c23b3ce971ed7e132c6f254f7165c4767dfee701a7f435830"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "4dcbb028-67ea-4512-9cf9-338f216aa879",
+      "id": "25418d3b-978d-45b4-ab27-c9c1a4ccc78c"
+    },
+    "revisions": {
+      "4dcbb028-67ea-4512-9cf9-338f216aa879": [
+        {
+          "id": "25418d3b-978d-45b4-ab27-c9c1a4ccc78c",
+          "scope": "project",
+          "report": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/.hyperframes/artifacts/checks/25418d3b-978d-45b4-ab27-c9c1a4ccc78c.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "safeZones": [
+                "tiktok",
+                "reels",
+                "shorts"
+              ],
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794732880170,
+          "contentHash": "a00958d2e895fbbe839d480ecc40c6475f8a12056e26282a80898eb05b2cadb9",
+          "revision": "4dcbb028-67ea-4512-9cf9-338f216aa879",
+          "inputFingerprint": "0bf1237aeece55185851260ea3150fc7839cbf6522b8e2be0a26057fa1b45b5f",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "ee97f2d8-1c92-487d-ace7-cb22b6e7181b",
+        "scope": "project",
+        "report": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/.hyperframes/artifacts/checks/ee97f2d8-1c92-487d-ace7-cb22b6e7181b.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 45000,
+            "cache": true,
+            "contrast": true,
+            "craft": true,
+            "strict": false,
+            "snapshots": false,
+            "safeZones": [
+              "tiktok",
+              "reels",
+              "shorts"
+            ],
+            "browserGpuMode": "auto",
+            "includeUnmounted": false
+          }
+        },
+        "createdAt": 1794732821274,
+        "contentHash": "4c9f44a5740804e7d12489b1d0077a8927f123fdd0bbc827112fa77b785101c7",
+        "revision": null,
+        "inputFingerprint": "a5f1bd0ff40d1f1be86c01114dcb034f55e966954f216ccdba04a759f6fca251",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "71bcd234-82ed-47e7-ab83-ff4bab6fd552",
+      "completedAt": 1794732909826,
+      "output": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/renders/hf-project_2026-11-15_14-24-48.mp4",
+      "status": "completed",
+      "revision": "4dcbb028-67ea-4512-9cf9-338f216aa879"
+    },
+    "retainedRevisions": [
+      "4dcbb028-67ea-4512-9cf9-338f216aa879"
+    ]
+  },
+  "pendingArtifactCleanup": []
+}

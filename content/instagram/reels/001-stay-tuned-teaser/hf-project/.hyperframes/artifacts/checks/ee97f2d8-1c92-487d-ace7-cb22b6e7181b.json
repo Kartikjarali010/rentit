@@ -1,0 +1,729 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene-hook\"> is a timeline element that contains nested <div id=\"hook-pov\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-hook",
+        "dataAttributes": {},
+        "sourceFile": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene-hook\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene-problem\"> is a timeline element that contains nested <div id=\"problem-label\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-problem",
+        "dataAttributes": {},
+        "sourceFile": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene-problem\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene-pivot\"> is a timeline element that contains nested <div id=\"pivot-text\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-pivot",
+        "dataAttributes": {},
+        "sourceFile": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene-pivot\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene-tease\"> is a timeline element that contains nested <div id=\"tease-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-tease",
+        "dataAttributes": {},
+        "sourceFile": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene-tease\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"scene-cta\"> is a timeline element that contains nested <div id=\"cta-top\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#scene-cta",
+        "dataAttributes": {},
+        "sourceFile": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"scene-cta\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 1,
+    "warningCount": 12,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "text_occluded",
+        "severity": "error",
+        "time": 6.944,
+        "selector": "#problem-label",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 277.55,
+          "top": 902,
+          "right": 802.44,
+          "bottom": 958,
+          "width": 524.89,
+          "height": 56
+        },
+        "containerSelector": "#card-tent",
+        "text": "To buy it costs...",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "lifetime": {
+          "start": 3,
+          "end": 10
+        },
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 277.55,
+          "y": 902,
+          "width": 524.89,
+          "height": 56
+        },
+        "firstSeen": 6.944,
+        "lastSeen": 9.722,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          6.944,
+          9.722
+        ]
+      },
+      {
+        "selector": "#hook-main",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 104.33,
+          "y": 821.2,
+          "width": 871.33,
+          "height": 202.8
+        },
+        "time": 1.389,
+        "rect": {
+          "left": 104.33,
+          "top": 821.2,
+          "right": 975.66,
+          "bottom": 1024,
+          "width": 871.33,
+          "height": 202.8
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "You need a DSLR for one day",
+        "message": "<div> \"You need a DSLR for one day\" is outside the safe area: TikTok (left and right edges), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.389,
+        "lastSeen": 1.389,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.389
+        ]
+      },
+      {
+        "selector": "#problem-label",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 277.55,
+          "y": 902,
+          "width": 524.89,
+          "height": 56
+        },
+        "time": 4.167,
+        "rect": {
+          "left": 277.55,
+          "top": 902,
+          "right": 802.44,
+          "bottom": 958,
+          "width": 524.89,
+          "height": 56
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "To buy it costs...",
+        "message": "<div> \"To buy it costs...\" is outside the safe area: TikTok (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.167,
+        "lastSeen": 9.722,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          4.167,
+          6.944,
+          9.722
+        ]
+      },
+      {
+        "selector": "#card-camera > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 693.16,
+          "y": 543.5,
+          "width": 234.84,
+          "height": 68
+        },
+        "time": 4.167,
+        "rect": {
+          "left": 693.16,
+          "top": 543.5,
+          "right": 928,
+          "bottom": 611.5,
+          "width": 234.84,
+          "height": 68
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "₹60,000",
+        "message": "<span> \"₹60,000\" is outside the safe area: YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.167,
+        "lastSeen": 9.722,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          4.167,
+          6.944,
+          9.722
+        ]
+      },
+      {
+        "selector": "#card-drill > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 730.67,
+          "y": 743.5,
+          "width": 197.33,
+          "height": 68
+        },
+        "time": 4.167,
+        "rect": {
+          "left": 730.67,
+          "top": 743.5,
+          "right": 928,
+          "bottom": 811.5,
+          "width": 197.33,
+          "height": 68
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "₹3,000",
+        "message": "<span> \"₹3,000\" is outside the safe area: YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.167,
+        "lastSeen": 9.722,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          4.167,
+          6.944,
+          9.722
+        ]
+      },
+      {
+        "selector": "#card-tent > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 732.09,
+          "y": 943.5,
+          "width": 195.91,
+          "height": 68
+        },
+        "time": 6.944,
+        "rect": {
+          "left": 732.09,
+          "top": 943.5,
+          "right": 928,
+          "bottom": 1011.5,
+          "width": 195.91,
+          "height": 68
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "₹5,000",
+        "message": "<span> \"₹5,000\" is outside the safe area: TikTok (right edge), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 6.944,
+        "lastSeen": 9.722,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          6.944,
+          9.722
+        ]
+      },
+      {
+        "selector": "#card-ps > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 697.27,
+          "y": 1143.5,
+          "width": 230.73,
+          "height": 68
+        },
+        "time": 6.944,
+        "rect": {
+          "left": 697.27,
+          "top": 1143.5,
+          "right": 928,
+          "bottom": 1211.5,
+          "width": 230.73,
+          "height": 68
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "₹55,000",
+        "message": "<span> \"₹55,000\" is outside the safe area: TikTok (right edge), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 6.944,
+        "lastSeen": 9.722,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          6.944,
+          9.722
+        ]
+      },
+      {
+        "selector": "#problem-tag",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 238.2,
+          "y": 1448.22,
+          "width": 603.6,
+          "height": 146.39
+        },
+        "time": 9.722,
+        "rect": {
+          "left": 238.2,
+          "top": 1448.22,
+          "right": 841.8,
+          "bottom": 1594.61,
+          "width": 603.6,
+          "height": 146.39
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Too expensive. Used once. Forgotten.",
+        "message": "<div> \"Too expensive. Used once. Forgotten.\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 9.722,
+        "lastSeen": 9.722,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          9.722
+        ]
+      },
+      {
+        "selector": "#pivot-text",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 134.11,
+          "y": 698.75,
+          "width": 811.77,
+          "height": 316
+        },
+        "time": 12.5,
+        "rect": {
+          "left": 134.11,
+          "top": 698.75,
+          "right": 945.88,
+          "bottom": 1014.75,
+          "width": 811.77,
+          "height": 316
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "What if you could just... rent it from someone n",
+        "message": "<div> \"What if you could just... rent it from someone n\" is outside the safe area: TikTok (right edge), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 12.5,
+        "lastSeen": 12.5,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          12.5
+        ]
+      },
+      {
+        "selector": "#tease-tagline",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 211.25,
+          "y": 987.7,
+          "width": 657.5,
+          "height": 135.8
+        },
+        "time": 15.278,
+        "rect": {
+          "left": 211.25,
+          "top": 987.7,
+          "right": 868.75,
+          "bottom": 1123.5,
+          "width": 657.5,
+          "height": 135.8
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Borrow anything from your neighbours",
+        "message": "<div> \"Borrow anything from your neighbours\" is outside the safe area: TikTok (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 15.278,
+        "lastSeen": 20.833,
+        "occurrences": 3,
+        "heldMs": 0,
+        "times": [
+          15.278,
+          18.056,
+          20.833
+        ]
+      },
+      {
+        "selector": "#tease-city",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 185.19,
+          "y": 1179.3,
+          "width": 709.61,
+          "height": 68
+        },
+        "time": 18.056,
+        "rect": {
+          "left": 185.19,
+          "top": 1179.3,
+          "right": 894.8,
+          "bottom": 1247.3,
+          "width": 709.61,
+          "height": 68
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "🏙️ Launching in Bangalore",
+        "message": "<div> \"🏙️ Launching in Bangalore\" is outside the safe area: TikTok (right edge), YouTube Shorts (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 18.056,
+        "lastSeen": 20.833,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          18.056,
+          20.833
+        ]
+      },
+      {
+        "selector": "#cta-main",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 208.31,
+          "y": 835.5,
+          "width": 663.36,
+          "height": 97
+        },
+        "time": 23.611,
+        "rect": {
+          "left": 208.31,
+          "top": 835.5,
+          "right": 871.67,
+          "bottom": 932.5,
+          "width": 663.36,
+          "height": 97
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Follow to be first",
+        "message": "<div> \"Follow to be first\" is outside the safe area: TikTok (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 23.611,
+        "lastSeen": 23.611,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          23.611
+        ]
+      },
+      {
+        "selector": "#cta-handle",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 243.98,
+          "y": 980.5,
+          "width": 592.02,
+          "height": 87
+        },
+        "time": 23.611,
+        "rect": {
+          "left": 243.98,
+          "top": 980.5,
+          "right": 836,
+          "bottom": 1067.5,
+          "width": 592.02,
+          "height": 87
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "@kartikjarali.me",
+        "message": "<div> \"@kartikjarali.me\" is outside the safe area: TikTok (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 23.611,
+        "lastSeen": 23.611,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          23.611
+        ]
+      }
+    ],
+    "duration": 25,
+    "samples": [
+      1.389,
+      4.167,
+      6.944,
+      9.722,
+      12.5,
+      15.278,
+      18.056,
+      20.833,
+      23.611
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 13,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.06:1; WCAG AA requires 3:1.",
+        "text": "📸",
+        "fg": "rgb(0,0,0)",
+        "bg": "rgb(10,10,10)",
+        "ratio": 1.06,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(93,93,93)",
+        "large": true,
+        "selector": "#hook-emoji",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 490,
+          "y": 1059.796875,
+          "width": 100,
+          "height": 131
+        },
+        "time": 1.389,
+        "times": [
+          1.389
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.06:1; WCAG AA requires 3:1.",
+        "text": "👀",
+        "fg": "rgb(0,0,0)",
+        "bg": "rgb(10,10,10)",
+        "ratio": 1.06,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(93,93,93)",
+        "large": true,
+        "selector": "#cta-top",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 490,
+          "y": 673.5,
+          "width": 100,
+          "height": 131
+        },
+        "time": 23.611,
+        "times": [
+          23.611
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      1.389,
+      6.944,
+      12.5,
+      18.056,
+      23.611
+    ],
+    "checked": 23,
+    "passed": 21
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "first_frame_empty",
+        "severity": "warning",
+        "message": "Frame 0 shows only the background, and the first frame is the thumbnail on social players: have the title or key image already on screen at 0 s instead of entering from nothing; see references/review.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "film_silent",
+        "severity": "warning",
+        "message": "This 25 s film has no sound source (no <audio>, no <video> with sound): add a music bed and sounds on the visible actions unless the person asked for silence; see references/sound.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 5.63 s (16.25–21.88 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 16.25,
+        "seconds": 5.625,
+        "floorSeconds": 3,
+        "until": 21.875
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 200
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "audio_none",
+        "severity": "info",
+        "message": "The film has no sound: no clip in it plays audio.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}
