@@ -5,270 +5,307 @@
     <meta name="viewport" content="width=1080, height=1920" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
     <style>
+      /* ═══════════════════════════════════════════════
+         BRAND TOKENS — reuse these in every future clip
+         ═══════════════════════════════════════════════ */
       :root {
-        --bg-dark: #0a0a0a;
-        --bg-card: #161616;
-        --accent: #FF4D00;
-        --accent-soft: #FF8C5A;
-        --white: #ffffff;
-        --muted: #777777;
-        --font: 'Arial', sans-serif;
-        --safe-h: 120px;
-        --safe-v: 260px;
-      }
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      html, body {
-        width: 1080px;
-        height: 1920px;
-        overflow: hidden;
-        background: var(--bg-dark);
-        font-family: var(--font);
-      }
-      #root {
-        width: 100%;
-        height: 100%;
-        position: relative;
-      }
-      .clip {
-        position: absolute;
-        width: 1080px;
-        height: 1920px;
-        top: 0; left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: var(--safe-v) var(--safe-h);
+        --orange:       #FF4500;
+        --orange-soft:  #FF7A45;
+        --dark:         #080808;
+        --card-bg:      #131313;
+        --card-border:  #222222;
+        --white:        #FFFFFF;
+        --muted:        #888888;
+        --safe-h:       150px;
+        --safe-v:       280px;
+        --font: system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
       }
 
-      /* ── SCENE 1: HOOK ── */
-      #scene-hook { background: var(--bg-dark); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--dark); font-family: var(--font); }
+      #root { width: 100%; height: 100%; position: relative; }
+
+      /* ═══════════════════════════════════════════
+         REUSABLE — copy these into future clips
+         ═══════════════════════════════════════════ */
+
+      /* Base scene */
+      .clip {
+        position: absolute; width: 1080px; height: 1920px; top: 0; left: 0;
+        display: flex; flex-direction: column;
+        align-items: flex-start; justify-content: center;
+        padding: var(--safe-v) var(--safe-h);
+        opacity: 0;
+      }
+
+      /* Dot-grid texture — subtle depth on dark scenes */
+      .dot-grid::before {
+        content: '';
+        position: absolute; inset: 0;
+        background-image: radial-gradient(circle, #1e1e1e 1.5px, transparent 1.5px);
+        background-size: 52px 52px;
+        pointer-events: none;
+      }
+
+      /* Item card — used in problem scene, reuse for product cards etc */
+      .item-card {
+        width: 100%; background: var(--card-bg);
+        border: 1.5px solid var(--card-border);
+        border-left: 4px solid var(--orange);
+        border-radius: 18px; padding: 30px 44px;
+        display: flex; align-items: center; justify-content: space-between;
+        margin-bottom: 16px;
+      }
+      .item-name  { font-size: 50px; font-weight: 700; color: var(--white); }
+      .item-price { font-size: 46px; font-weight: 800; color: var(--orange); letter-spacing: -0.02em; }
+
+      /* Pill CTA — reuse for any bottom CTA button */
+      .pill {
+        background: var(--orange); border-radius: 100px;
+        padding: 28px 72px; font-size: 46px; font-weight: 700;
+        color: var(--white); letter-spacing: 0.02em;
+      }
+
+      /* ═══════════════
+         SCENE 1 — HOOK
+         ═══════════════ */
+      #scene-hook { background: var(--dark); justify-content: center; }
+      /* orange glow anchored at bottom-left */
+      #scene-hook::after {
+        content: ''; position: absolute; bottom: 0; left: -100px;
+        width: 900px; height: 900px; pointer-events: none;
+        background: radial-gradient(circle, rgba(255,69,0,0.14) 0%, transparent 65%);
+      }
+
       #hook-pov {
-        font-size: 46px;
-        color: var(--muted);
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        margin-bottom: 28px;
-        align-self: flex-start;
+        font-size: 32px; font-weight: 700; letter-spacing: 0.22em;
+        text-transform: uppercase; color: var(--orange); margin-bottom: 20px;
       }
       #hook-main {
-        font-size: 80px;
-        font-weight: 900;
-        color: var(--white);
-        line-height: 1.1;
-        align-self: flex-start;
-        margin-bottom: 48px;
+        font-size: 90px; font-weight: 800; color: var(--white);
+        line-height: 1.05; margin-bottom: 40px; letter-spacing: -0.02em;
       }
-      #hook-emoji {
-        font-size: 110px;
-        align-self: flex-start;
-      }
+      #hook-main em { color: var(--orange); font-style: normal; }
+      #hook-emoji { font-size: 108px; line-height: 1; }
 
-      /* ── SCENE 2: PROBLEM ── */
-      #scene-problem { background: var(--bg-dark); justify-content: flex-start; }
+      /* ══════════════════
+         SCENE 2 — PROBLEM
+         ══════════════════ */
+      #scene-problem { background: var(--dark); justify-content: flex-start; padding-top: calc(var(--safe-v) - 40px); }
+
       #problem-label {
-        font-size: 42px;
-        color: var(--muted);
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        margin-bottom: 48px;
-        margin-top: 20px;
+        font-size: 38px; font-weight: 500; color: var(--muted);
+        letter-spacing: 0.06em; margin-bottom: 36px;
       }
-      .item-card {
-        width: 100%;
-        background: var(--bg-card);
-        border: 2px solid #1f1f1f;
-        border-radius: 20px;
-        padding: 36px 48px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 20px;
-      }
-      .item-name { font-size: 56px; font-weight: 800; color: var(--white); }
-      .item-price { font-size: 48px; font-weight: 700; color: var(--accent); }
       #problem-tag {
-        font-size: 52px;
-        font-weight: 700;
-        color: var(--white);
-        text-align: left;
-        line-height: 1.4;
-        margin-top: 48px;
-        align-self: flex-start;
+        font-size: 56px; font-weight: 700; color: var(--white);
+        line-height: 1.35; margin-top: 44px;
       }
-      #problem-tag span { color: var(--accent); }
+      #problem-tag .hi { color: var(--orange); }
 
-      /* ── SCENE 3: PIVOT ── */
-      #scene-pivot { background: var(--accent); }
-      #pivot-text {
-        font-size: 80px;
-        font-weight: 900;
-        color: var(--white);
-        text-align: center;
-        line-height: 1.2;
-        margin-bottom: 48px;
+      /* ════════════════
+         SCENE 3 — PIVOT
+         ════════════════ */
+      #scene-pivot {
+        background: var(--orange);
+        align-items: center; justify-content: center; text-align: center;
+      }
+      #pivot-eyebrow {
+        font-size: 40px; font-weight: 500;
+        color: rgba(255,255,255,0.9); letter-spacing: 0.06em; margin-bottom: 20px;
+      }
+      #pivot-big {
+        font-size: 130px; font-weight: 900; color: var(--white);
+        line-height: 0.95; letter-spacing: -0.04em; margin-bottom: 20px;
+      }
+      #pivot-sub {
+        font-size: 46px; font-weight: 500;
+        color: rgba(255,255,255,0.9); letter-spacing: 0.03em; margin-bottom: 56px;
       }
       #pivot-emoji { font-size: 120px; }
 
-      /* ── SCENE 4: TEASE ── */
-      #scene-tease { background: var(--bg-dark); }
-      #tease-eyebrow {
-        font-size: 38px;
-        color: var(--muted);
-        font-weight: 500;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        margin-bottom: 32px;
-      }
-      #tease-logo {
-        font-size: 148px;
-        font-weight: 900;
-        color: var(--white);
-        letter-spacing: -0.04em;
-        margin-bottom: 28px;
-      }
-      #tease-logo span { color: var(--accent); }
-      #tease-tagline {
-        font-size: 46px;
-        color: var(--white);
-        opacity: 0.7;
-        text-align: center;
-        line-height: 1.4;
-        margin-bottom: 48px;
-      }
-      #tease-city {
-        font-size: 50px;
-        font-weight: 700;
-        color: var(--accent-soft);
-      }
-      #tease-pulse {
-        width: 180px;
-        height: 6px;
-        background: var(--accent);
-        border-radius: 3px;
-        margin-top: 56px;
+      /* ════════════════
+         SCENE 4 — TEASE
+         ════════════════ */
+      #scene-tease { background: var(--dark); align-items: center; justify-content: center; }
+      #scene-tease::after {
+        content: ''; position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1000px; height: 1000px; pointer-events: none;
+        background: radial-gradient(circle, rgba(255,69,0,0.1) 0%, transparent 60%);
       }
 
-      /* ── SCENE 5: CTA ── */
-      #scene-cta { background: var(--bg-dark); }
-      #cta-top { font-size: 100px; margin-bottom: 32px; }
-      #cta-main {
-        font-size: 76px;
-        font-weight: 900;
-        color: var(--white);
-        text-align: center;
-        line-height: 1.2;
-        margin-bottom: 36px;
+      #tease-eyebrow {
+        font-size: 30px; font-weight: 500; letter-spacing: 0.28em;
+        text-transform: uppercase; color: var(--muted); margin-bottom: 20px; align-self: center;
       }
-      #cta-handle {
-        font-size: 62px;
-        font-weight: 800;
-        color: var(--accent);
-        margin-bottom: 56px;
+      #tease-logo {
+        font-size: 168px; font-weight: 900; letter-spacing: -0.05em;
+        color: var(--white); line-height: 1; align-self: center;
       }
-      #cta-pill {
-        background: var(--accent);
-        border-radius: 100px;
-        padding: 24px 64px;
-        font-size: 46px;
-        font-weight: 700;
-        color: var(--white);
+      #tease-logo span { color: var(--orange); }
+
+      #tease-underline {
+        height: 6px; background: var(--orange); border-radius: 3px;
+        align-self: center; margin-top: 4px; margin-bottom: 40px; width: 0;
       }
+      #tease-tagline {
+        font-size: 42px; font-weight: 400; color: rgba(255,255,255,0.8);
+        text-align: center; line-height: 1.4; margin-bottom: 28px; align-self: center; opacity: 0;
+      }
+      #tease-city {
+        font-size: 46px; font-weight: 600; color: var(--orange-soft);
+        align-self: center; opacity: 0;
+      }
+
+      /* ══════════════
+         SCENE 5 — CTA
+         ══════════════ */
+      #scene-cta { background: var(--dark); align-items: center; justify-content: center; text-align: center; }
+      #scene-cta::after {
+        content: ''; position: absolute; bottom: 0; left: 50%;
+        transform: translateX(-50%);
+        width: 900px; height: 700px; pointer-events: none;
+        background: radial-gradient(circle, rgba(255,69,0,0.12) 0%, transparent 65%);
+      }
+
+      #cta-emoji   { font-size: 112px; align-self: center; margin-bottom: 32px; }
+      #cta-main    { font-size: 76px; font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 28px; align-self: center; letter-spacing: -0.02em; }
+      #cta-handle  { font-size: 56px; font-weight: 800; color: var(--orange); margin-bottom: 64px; align-self: center; }
+      #cta-pill    { align-self: center; }
+
+      /* Flash — white cut between scenes */
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; z-index: 999; }
     </style>
   </head>
   <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="25"
-      data-width="1080"
-      data-height="1920"
-    >
+    <div id="root" data-composition-id="main" data-start="0" data-duration="25" data-width="1080" data-height="1920">
 
-      <!-- ── SCENE 1: HOOK (0–3s) ── -->
-      <div id="scene-hook" class="clip" data-start="0" data-duration="3" data-track-index="0">
+      <div id="flash"></div>
+
+      <!-- SCENE 1: HOOK (0–3s) -->
+      <div id="scene-hook" class="clip dot-grid" data-start="0" data-duration="3" data-track-index="0">
         <div id="hook-pov">POV</div>
-        <div id="hook-main">You need a DSLR for one day</div>
+        <div id="hook-main">You need a <em>DSLR</em><br/>for one day</div>
         <div id="hook-emoji">📸</div>
       </div>
 
-      <!-- ── SCENE 2: PROBLEM (3–10s) ── -->
-      <div id="scene-problem" class="clip" data-start="3" data-duration="7" data-track-index="1">
-        <div id="problem-label">To buy it costs...</div>
+      <!-- SCENE 2: PROBLEM (3–10s) -->
+      <div id="scene-problem" class="clip dot-grid" data-start="3" data-duration="7" data-track-index="1">
+        <div id="problem-label">Buying one costs...</div>
         <div id="card-camera" class="item-card"><span class="item-name">📸 Camera</span><span class="item-price">₹60,000</span></div>
         <div id="card-drill"  class="item-card"><span class="item-name">🔧 Drill</span><span class="item-price">₹3,000</span></div>
         <div id="card-tent"   class="item-card"><span class="item-name">⛺ Tent</span><span class="item-price">₹5,000</span></div>
         <div id="card-ps"     class="item-card"><span class="item-name">🎮 PS5</span><span class="item-price">₹55,000</span></div>
-        <div id="problem-tag">Too expensive.<br/><span>Used once. Forgotten.</span></div>
+        <div id="problem-tag">Too expensive.<br/><span class="hi">Used once. Forgotten.</span></div>
       </div>
 
-      <!-- ── SCENE 3: PIVOT (10–14s) ── -->
+      <!-- SCENE 3: PIVOT (10–14s) -->
       <div id="scene-pivot" class="clip" data-start="10" data-duration="4" data-track-index="2">
-        <div id="pivot-text">What if you could just rent it from someone nearby?</div>
+        <div id="pivot-eyebrow">What if you could just</div>
+        <div id="pivot-big">RENT IT</div>
+        <div id="pivot-sub">from someone nearby?</div>
         <div id="pivot-emoji">🤝</div>
       </div>
 
-      <!-- ── SCENE 4: TEASE (14–22s) ── -->
-      <div id="scene-tease" class="clip" data-start="14" data-duration="8" data-track-index="3">
+      <!-- SCENE 4: TEASE (14–22s) -->
+      <div id="scene-tease" class="clip dot-grid" data-start="14" data-duration="8" data-track-index="3">
         <div id="tease-eyebrow">Introducing</div>
         <div id="tease-logo">Rent<span>It</span></div>
+        <div id="tease-underline"></div>
         <div id="tease-tagline">Borrow anything from your neighbours</div>
         <div id="tease-city">🏙️ Launching in Bangalore</div>
-        <div id="tease-pulse"></div>
       </div>
 
-      <!-- ── SCENE 5: CTA (22–25s) ── -->
-      <div id="scene-cta" class="clip" data-start="22" data-duration="3" data-track-index="4">
-        <div id="cta-top">👀</div>
-        <div id="cta-main">Follow to be first</div>
+      <!-- SCENE 5: CTA (22–25s) -->
+      <div id="scene-cta" class="clip dot-grid" data-start="22" data-duration="3" data-track-index="4">
+        <div id="cta-emoji">👀</div>
+        <div id="cta-main">Follow to<br/>be first</div>
         <div id="cta-handle">@kartikjarali.me</div>
-        <div id="cta-pill">Stay Tuned</div>
+        <div class="pill" id="cta-pill">Stay Tuned</div>
       </div>
 
     </div>
+
+    <!--
+      AUDIO: drop any .mp3 into assets/music/ and uncomment.
+      Mixkit "Inspiring Cinematic Intro" (free, no attribution) works great:
+        https://mixkit.co/free-stock-music/tag/startup/
+      Save as assets/music/bg-track.mp3 then uncomment the line below.
+    -->
+    <!-- <audio id="bg-music" data-has-audio="true" src="assets/music/bg-track.mp3"></audio> -->
 
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
 
-      // ── Scene 1: Hook — visible at t=0, no delay ──
-      gsap.set("#hook-pov",  { opacity: 1 });
-      gsap.set("#hook-main", { opacity: 1 });
-      gsap.set("#hook-emoji",{ opacity: 1 });
-      tl.fromTo("#hook-pov",  { y: -20, opacity: 0 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, 0);
-      tl.fromTo("#hook-main", { scale: 0.88, opacity: 0 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.5)" }, 0.1);
-      tl.fromTo("#hook-emoji",{ y: 30, opacity: 0 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 0.4);
+      // ── SCENE 1: HOOK ──
+      tl.set("#scene-hook", { opacity: 1 }, 0);
+      tl.fromTo("#hook-pov",   { y: -20, opacity: 0 },            { y: 0, opacity: 1, duration: 0.2, ease: "power3.out" }, 0.05);
+      tl.fromTo("#hook-main",  { y: 50, opacity: 0 },             { y: 0, opacity: 1, duration: 0.4, ease: "power4.out" }, 0.2);
+      tl.fromTo("#hook-emoji", { scale: 0.2, opacity: 0 },        { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2.5)" }, 0.55);
+      tl.to("#hook-emoji",     { rotation: 15, duration: 0.1, ease: "power1.inOut", yoyo: true, repeat: 5 }, 1.0);
+      // exit
+      tl.to(["#hook-pov","#hook-main","#hook-emoji"], { y: -40, opacity: 0, duration: 0.2, stagger: 0.04, ease: "power2.in" }, 2.65);
 
-      // ── Scene 2: Problem ──
-      tl.fromTo("#problem-label", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 3.1);
-      tl.fromTo("#card-camera", { x: -60, opacity: 0 }, { opacity: 1, x: 0, duration: 0.28, ease: "power3.out" }, 3.4);
-      tl.fromTo("#card-drill",  { x: -60, opacity: 0 }, { opacity: 1, x: 0, duration: 0.28, ease: "power3.out" }, 3.75);
-      tl.fromTo("#card-tent",   { x: -60, opacity: 0 }, { opacity: 1, x: 0, duration: 0.28, ease: "power3.out" }, 4.1);
-      tl.fromTo("#card-ps",     { x: -60, opacity: 0 }, { opacity: 1, x: 0, duration: 0.28, ease: "power3.out" }, 4.45);
-      tl.fromTo("#problem-tag", { y: 24, opacity: 0 }, { opacity: 1, y: 0, duration: 0.35 }, 7.4);
+      // ── FLASH hook→problem ──
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.75, duration: 0.06, yoyo: true, repeat: 1 }, 2.9);
 
-      // ── Scene 3: Pivot ──
-      tl.fromTo("#pivot-text",  { scale: 0.88, opacity: 0 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.3)" }, 10.15);
-      tl.fromTo("#pivot-emoji", { rotation: -15, opacity: 0 }, { opacity: 1, rotation: 0, duration: 0.4, ease: "back.out(2)" }, 10.7);
+      // ── SCENE 2: PROBLEM ──
+      tl.set("#scene-problem", { opacity: 1 }, 3.0);
+      tl.fromTo("#problem-label", { x: -24, opacity: 0 }, { x: 0, opacity: 1, duration: 0.22, ease: "power3.out" }, 3.1);
+      tl.fromTo("#card-camera",   { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.28, ease: "power4.out" }, 3.38);
+      tl.fromTo("#card-drill",    { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.28, ease: "power4.out" }, 3.68);
+      tl.fromTo("#card-tent",     { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.28, ease: "power4.out" }, 3.98);
+      tl.fromTo("#card-ps",       { x: -80, opacity: 0 }, { x: 0, opacity: 1, duration: 0.28, ease: "power4.out" }, 4.28);
+      // prices pop separately
+      tl.fromTo(".item-price", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2)", stagger: 0.3 }, 3.48);
+      tl.fromTo("#problem-tag", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" }, 7.2);
+      // exit
+      tl.to("#scene-problem", { opacity: 0, duration: 0.2, ease: "power2.in" }, 9.75);
 
-      // ── Scene 4: Tease — staggered reveals + keep moving to avoid dead stretch ──
-      tl.fromTo("#tease-eyebrow", { y: -16, opacity: 0 }, { opacity: 1, y: 0, duration: 0.28 }, 14.15);
-      tl.fromTo("#tease-logo",    { scale: 0.72, opacity: 0 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, 14.4);
-      tl.fromTo("#tease-tagline", { opacity: 0 }, { opacity: 0.7, duration: 0.35 }, 15.0);
-      tl.fromTo("#tease-city",    { y: 16, opacity: 0 }, { opacity: 1, y: 0, duration: 0.35 }, 15.5);
-      tl.fromTo("#tease-pulse",   { scaleX: 0, opacity: 0 }, { opacity: 1, scaleX: 1, duration: 0.5, ease: "power2.inOut", transformOrigin: "left center" }, 16.1);
-      // keep alive: gentle logo breathe from 16.6 → 21.5s
-      tl.to("#tease-logo", { scale: 1.04, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 3 }, 16.6);
-      tl.to("#tease-city", { opacity: 0.5, duration: 1, ease: "sine.inOut", yoyo: true, repeat: 2 }, 17.0);
+      // ── FLASH problem→pivot ──
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 1, duration: 0.07, yoyo: true, repeat: 1 }, 9.9);
 
-      // ── Scene 5: CTA ──
-      tl.fromTo("#cta-top",    { scale: 0.4, opacity: 0 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 22.1);
-      tl.fromTo("#cta-main",   { y: 18, opacity: 0 }, { opacity: 1, y: 0, duration: 0.3 }, 22.3);
-      tl.fromTo("#cta-handle", { opacity: 0 }, { opacity: 1, duration: 0.28 }, 22.55);
-      tl.fromTo("#cta-pill",   { scale: 0.8, opacity: 0 }, { opacity: 1, scale: 1, duration: 0.32, ease: "back.out(1.5)" }, 22.8);
+      // ── SCENE 3: PIVOT ──
+      tl.set("#scene-pivot", { opacity: 1 }, 10.0);
+      tl.fromTo("#pivot-eyebrow", { y: 24, opacity: 0 },           { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 10.1);
+      tl.fromTo("#pivot-big",     { scale: 0.65, opacity: 0 },     { scale: 1, opacity: 1, duration: 0.42, ease: "back.out(1.6)" }, 10.3);
+      tl.fromTo("#pivot-sub",     { y: 20, opacity: 0 },           { y: 0, opacity: 1, duration: 0.28, ease: "power3.out" }, 10.68);
+      tl.fromTo("#pivot-emoji",   { scale: 0.1, opacity: 0 },      { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(3)" }, 11.05);
+      tl.to("#pivot-emoji",       { rotation: -12, duration: 0.18, ease: "sine.inOut", yoyo: true, repeat: 5 }, 11.5);
+      // exit
+      tl.to("#scene-pivot", { opacity: 0, duration: 0.22, ease: "power2.in" }, 13.72);
+
+      // ── FLASH pivot→tease ──
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.9, duration: 0.08, yoyo: true, repeat: 1 }, 13.9);
+
+      // ── SCENE 4: TEASE ──
+      tl.set("#scene-tease", { opacity: 1 }, 14.0);
+      tl.fromTo("#tease-eyebrow",  { y: -16, opacity: 0 },            { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, 14.1);
+      tl.fromTo("#tease-logo",     { scale: 0.55, opacity: 0 },       { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2.2)" }, 14.3);
+      tl.fromTo("#tease-underline",{ width: 0 },                      { width: "320px", duration: 0.42, ease: "power4.out" }, 14.75);
+      tl.to("#tease-tagline",      { opacity: 1, duration: 0.3 }, 15.2);
+      tl.fromTo("#tease-city",     { y: 18, opacity: 0 },             { y: 0, opacity: 1, duration: 0.3 }, 15.6);
+      // keep alive
+      tl.to("#tease-logo",         { scale: 1.03, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: 3 }, 16.1);
+      tl.to("#tease-city",         { opacity: 0.5, duration: 1.0, ease: "sine.inOut", yoyo: true, repeat: 3 }, 16.5);
+      tl.to("#tease-underline",    { opacity: 0.4, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 2 }, 17.0);
+      // exit
+      tl.to("#scene-tease", { opacity: 0, duration: 0.2, ease: "power2.in" }, 21.75);
+
+      // ── FLASH tease→cta ──
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.6, duration: 0.07, yoyo: true, repeat: 1 }, 21.9);
+
+      // ── SCENE 5: CTA ──
+      tl.set("#scene-cta", { opacity: 1 }, 22.0);
+      tl.fromTo("#cta-emoji",  { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.38, ease: "back.out(2.8)" }, 22.1);
+      tl.fromTo("#cta-main",   { y: 24, opacity: 0 },      { y: 0, opacity: 1, duration: 0.3,  ease: "power3.out" }, 22.42);
+      tl.fromTo("#cta-handle", { opacity: 0, scale: 0.85 },{ opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.5)" }, 22.68);
+      tl.fromTo("#cta-pill",   { scale: 0.75, opacity: 0 },{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 22.92);
+      // pill pulse + handle glow
+      tl.to("#cta-pill",   { scale: 1.06, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: 2 }, 23.3);
+      tl.to("#cta-handle", { color: "#FF7A45", duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: 2 }, 23.5);
 
       window.__timelines["main"] = tl;
       tl.seek(0);

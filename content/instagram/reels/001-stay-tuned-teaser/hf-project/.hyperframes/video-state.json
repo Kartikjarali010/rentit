@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "5997c013-3eed-435a-b8de-e113da799301",
-  "currentRevision": "4dcbb028-67ea-4512-9cf9-338f216aa879",
+  "currentRevision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
@@ -17,8 +17,8 @@
       "content": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
     },
     "index.html": {
-      "hash": "9ca5f62879ce7a2c23b3ce971ed7e132c6f254f7165c4767dfee701a7f435830",
-      "content": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/9c/9ca5f62879ce7a2c23b3ce971ed7e132c6f254f7165c4767dfee701a7f435830"
+      "hash": "3b88f00fa830f51957557c186f63d74612c561de68a890c129ee891a834e14d7",
+      "content": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/3b/3b88f00fa830f51957557c186f63d74612c561de68a890c129ee891a834e14d7"
     },
     "meta.json": {
       "hash": "db0aa4beb1eca78a0f7938dc66b24bf774e7983386de12c81a7d93d2e618f156",
@@ -44,12 +44,42 @@
           "after": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/9c/9ca5f62879ce7a2c23b3ce971ed7e132c6f254f7165c4767dfee701a7f435830"
         }
       }
+    },
+    "0f64b863-f5fe-423a-b447-023c448a15dc": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794733653367,
+      "endedAt": 1794733653368,
+      "files": {
+        "index.html": {
+          "before": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/9c/9ca5f62879ce7a2c23b3ce971ed7e132c6f254f7165c4767dfee701a7f435830",
+          "after": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/14/149229bac458b9e33997b41fdd7b3fb12453008d5a92bd3e3031dc5978e929fd"
+        }
+      }
+    },
+    "574a04c1-9b72-43d7-9428-00fdfb338f2c": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1794734046200,
+      "endedAt": 1794734046200,
+      "files": {
+        "index.html": {
+          "before": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/14/149229bac458b9e33997b41fdd7b3fb12453008d5a92bd3e3031dc5978e929fd",
+          "after": "/Users/kartik/.cache/hyperframes/history/5997c013-3eed-435a-b8de-e113da799301/blobs/3b/3b88f00fa830f51957557c186f63d74612c561de68a890c129ee891a834e14d7"
+        }
+      }
     }
   },
   "checks": {
     "latest": {
-      "revision": "4dcbb028-67ea-4512-9cf9-338f216aa879",
-      "id": "25418d3b-978d-45b4-ab27-c9c1a4ccc78c"
+      "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
+      "id": "4c3217c4-c8e0-47e5-978d-d4c95f4b1ae1"
     },
     "revisions": {
       "4dcbb028-67ea-4512-9cf9-338f216aa879": [
@@ -85,6 +115,81 @@
           "contentHash": "a00958d2e895fbbe839d480ecc40c6475f8a12056e26282a80898eb05b2cadb9",
           "revision": "4dcbb028-67ea-4512-9cf9-338f216aa879",
           "inputFingerprint": "0bf1237aeece55185851260ea3150fc7839cbf6522b8e2be0a26057fa1b45b5f",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "0f64b863-f5fe-423a-b447-023c448a15dc": [
+        {
+          "id": "73238feb-ad18-49a8-9097-aaaab8de2fff",
+          "scope": "project",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "safeZones": [
+                "tiktok",
+                "reels",
+                "shorts"
+              ],
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794733655836,
+          "contentHash": "9ffd5d136def90e2d218a0c3e2b6cf2d12805001b8da2388969a73570f905c7d",
+          "revision": "0f64b863-f5fe-423a-b447-023c448a15dc",
+          "inputFingerprint": "8cadc08b327f50a89fb146870532f6534328fd990ea766af90fb19be0f0ddcd8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "d0c7d2ac-4ae7-40a9-959c-99a78d6da6ef"
+        }
+      ],
+      "574a04c1-9b72-43d7-9428-00fdfb338f2c": [
+        {
+          "id": "4c3217c4-c8e0-47e5-978d-d4c95f4b1ae1",
+          "scope": "project",
+          "report": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/.hyperframes/artifacts/checks/4c3217c4-c8e0-47e5-978d-d4c95f4b1ae1.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 45000,
+              "cache": true,
+              "contrast": true,
+              "craft": true,
+              "strict": false,
+              "snapshots": false,
+              "safeZones": [
+                "tiktok",
+                "reels",
+                "shorts"
+              ],
+              "browserGpuMode": "auto",
+              "includeUnmounted": false
+            }
+          },
+          "createdAt": 1794734047938,
+          "contentHash": "194f002a948275e4de3c4f6db73ddfe97045b0570608452e2bc314d3943b6ef6",
+          "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
+          "inputFingerprint": "1a825e0abf4f09013fa68eeb54105b5845d6ec97ad7a42dd1fd65ec6253dcc2d",
           "inputScope": "local-project-files",
           "attribution": "recorded-revision"
         }
@@ -129,19 +234,315 @@
     ]
   },
   "snapshots": {
-    "latest": null,
-    "revisions": {},
+    "latest": {
+      "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
+      "id": "05ddac0c-f32e-4b5d-87fa-deaa4f2b5b75-6"
+    },
+    "revisions": {
+      "0f64b863-f5fe-423a-b447-023c448a15dc": [
+        {
+          "scope": "full",
+          "id": "f97cec56-ccef-423a-877d-c27b6c6f447a-0",
+          "time": 1,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794733841415,
+          "contentHash": "f5a0b1b2f4f8420ffc52ac00f3058637911728c7dfc1d21c67988ab97b240ce6",
+          "revision": "0f64b863-f5fe-423a-b447-023c448a15dc",
+          "inputFingerprint": "8cadc08b327f50a89fb146870532f6534328fd990ea766af90fb19be0f0ddcd8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "d0c7d2ac-4ae7-40a9-959c-99a78d6da6ef"
+        },
+        {
+          "scope": "full",
+          "id": "f97cec56-ccef-423a-877d-c27b6c6f447a-1",
+          "time": 5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794733841415,
+          "contentHash": "628edc1190d78ea24d42c2d8d56d05687047cb27269efd71d35abc710c60f226",
+          "revision": "0f64b863-f5fe-423a-b447-023c448a15dc",
+          "inputFingerprint": "8cadc08b327f50a89fb146870532f6534328fd990ea766af90fb19be0f0ddcd8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "d0c7d2ac-4ae7-40a9-959c-99a78d6da6ef"
+        },
+        {
+          "scope": "full",
+          "id": "f97cec56-ccef-423a-877d-c27b6c6f447a-2",
+          "time": 11,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794733841415,
+          "contentHash": "ed3b4dca1e87a8ce78fcaef25a206eac10d1bb559e28cd2803b621b8a32a66a4",
+          "revision": "0f64b863-f5fe-423a-b447-023c448a15dc",
+          "inputFingerprint": "8cadc08b327f50a89fb146870532f6534328fd990ea766af90fb19be0f0ddcd8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "d0c7d2ac-4ae7-40a9-959c-99a78d6da6ef"
+        },
+        {
+          "scope": "full",
+          "id": "f97cec56-ccef-423a-877d-c27b6c6f447a-3",
+          "time": 15,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794733841415,
+          "contentHash": "040754e1075241af88d6095842cbe343eb758e2f0aca28cc4667901979612774",
+          "revision": "0f64b863-f5fe-423a-b447-023c448a15dc",
+          "inputFingerprint": "8cadc08b327f50a89fb146870532f6534328fd990ea766af90fb19be0f0ddcd8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "d0c7d2ac-4ae7-40a9-959c-99a78d6da6ef"
+        },
+        {
+          "scope": "full",
+          "id": "f97cec56-ccef-423a-877d-c27b6c6f447a-4",
+          "time": 20,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794733841415,
+          "contentHash": "01bd0e97dd2a145aa39da2c21756bb6286fd40a45d9a72ad20e57b302551b574",
+          "revision": "0f64b863-f5fe-423a-b447-023c448a15dc",
+          "inputFingerprint": "8cadc08b327f50a89fb146870532f6534328fd990ea766af90fb19be0f0ddcd8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "d0c7d2ac-4ae7-40a9-959c-99a78d6da6ef"
+        },
+        {
+          "scope": "full",
+          "id": "f97cec56-ccef-423a-877d-c27b6c6f447a-5",
+          "time": 23,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794733841415,
+          "contentHash": "a9aaaa2dda160189e7c1ea8623a9c52fd8ca5cfaf0a28631d9879cf2517be0a7",
+          "revision": "0f64b863-f5fe-423a-b447-023c448a15dc",
+          "inputFingerprint": "8cadc08b327f50a89fb146870532f6534328fd990ea766af90fb19be0f0ddcd8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "d0c7d2ac-4ae7-40a9-959c-99a78d6da6ef"
+        },
+        {
+          "scope": "full",
+          "id": "f97cec56-ccef-423a-877d-c27b6c6f447a-6",
+          "time": 24.75,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794733841416,
+          "contentHash": "17d5bdd454a4064e63ffd394828f266c091fa4905a60a34a8ab2d348a5100bdb",
+          "revision": "0f64b863-f5fe-423a-b447-023c448a15dc",
+          "inputFingerprint": "8cadc08b327f50a89fb146870532f6534328fd990ea766af90fb19be0f0ddcd8",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "d0c7d2ac-4ae7-40a9-959c-99a78d6da6ef"
+        }
+      ],
+      "574a04c1-9b72-43d7-9428-00fdfb338f2c": [
+        {
+          "scope": "full",
+          "id": "05ddac0c-f32e-4b5d-87fa-deaa4f2b5b75-0",
+          "image": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/.hyperframes/artifacts/snapshots/29b2b13d-f1cf-4d38-a3d1-8d5c936efe59/frame-00-at-1s.png",
+          "time": 1,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794734061969,
+          "contentHash": "1282d4cd7144fdc61d6ce5a53e0937ac41db19fecd7b26a8dd819e37f2258191",
+          "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
+          "inputFingerprint": "1a825e0abf4f09013fa68eeb54105b5845d6ec97ad7a42dd1fd65ec6253dcc2d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "05ddac0c-f32e-4b5d-87fa-deaa4f2b5b75-1",
+          "image": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/.hyperframes/artifacts/snapshots/29b2b13d-f1cf-4d38-a3d1-8d5c936efe59/frame-01-at-5s.png",
+          "time": 5,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794734061969,
+          "contentHash": "e0f5b4062b3da0a0d130ac8c157bafac0ddfeb1f3611b36b1f038c658a0831d1",
+          "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
+          "inputFingerprint": "1a825e0abf4f09013fa68eeb54105b5845d6ec97ad7a42dd1fd65ec6253dcc2d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "05ddac0c-f32e-4b5d-87fa-deaa4f2b5b75-2",
+          "image": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/.hyperframes/artifacts/snapshots/29b2b13d-f1cf-4d38-a3d1-8d5c936efe59/frame-02-at-11s.png",
+          "time": 11,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794734061969,
+          "contentHash": "523dc60a7bb1fb9701e0ccb4a94023dc61ea1263d89897cfa6b5c8d0bfdcf07c",
+          "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
+          "inputFingerprint": "1a825e0abf4f09013fa68eeb54105b5845d6ec97ad7a42dd1fd65ec6253dcc2d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "05ddac0c-f32e-4b5d-87fa-deaa4f2b5b75-3",
+          "image": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/.hyperframes/artifacts/snapshots/29b2b13d-f1cf-4d38-a3d1-8d5c936efe59/frame-03-at-15s.png",
+          "time": 15,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794734061969,
+          "contentHash": "1fb22e4c9a29eb552f6b5269e32e5883d0c6b6bda3c7aa37d073add5bc2dd090",
+          "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
+          "inputFingerprint": "1a825e0abf4f09013fa68eeb54105b5845d6ec97ad7a42dd1fd65ec6253dcc2d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "05ddac0c-f32e-4b5d-87fa-deaa4f2b5b75-4",
+          "image": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/.hyperframes/artifacts/snapshots/29b2b13d-f1cf-4d38-a3d1-8d5c936efe59/frame-04-at-21s.png",
+          "time": 21,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794734061969,
+          "contentHash": "01b331f28b2ef731a0c3cd5b8e3994d56eb74469abb07ba7a70619b031288258",
+          "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
+          "inputFingerprint": "1a825e0abf4f09013fa68eeb54105b5845d6ec97ad7a42dd1fd65ec6253dcc2d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "05ddac0c-f32e-4b5d-87fa-deaa4f2b5b75-5",
+          "image": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/.hyperframes/artifacts/snapshots/29b2b13d-f1cf-4d38-a3d1-8d5c936efe59/frame-05-at-23s.png",
+          "time": 23,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794734061969,
+          "contentHash": "fb9e5a53dfe72bc7c425681cf661ab5e468197fd882ff5a7d48b9b8f504ddc5f",
+          "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
+          "inputFingerprint": "1a825e0abf4f09013fa68eeb54105b5845d6ec97ad7a42dd1fd65ec6253dcc2d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "05ddac0c-f32e-4b5d-87fa-deaa4f2b5b75-6",
+          "image": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/.hyperframes/artifacts/snapshots/29b2b13d-f1cf-4d38-a3d1-8d5c936efe59/frame-06-at-24.75s.png",
+          "time": 24.75,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1794734061969,
+          "contentHash": "cd34460ac3eacc67ccc686fca524ce557c35a835364eb862fed424a261e96201",
+          "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c",
+          "inputFingerprint": "1a825e0abf4f09013fa68eeb54105b5845d6ec97ad7a42dd1fd65ec6253dcc2d",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
     "unversioned": []
   },
   "renders": {
     "latest": {
-      "id": "71bcd234-82ed-47e7-ab83-ff4bab6fd552",
-      "completedAt": 1794732909826,
-      "output": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/renders/hf-project_2026-11-15_14-24-48.mp4",
+      "id": "d0c7d2ac-4ae7-40a9-959c-99a78d6da6ef",
+      "completedAt": 1794734101677,
+      "output": "/Users/kartik/Documents/Projects/rentit/content/instagram/reels/001-stay-tuned-teaser/hf-project/renders/hf-project_2026-11-15_14-44-50.mp4",
       "status": "completed",
-      "revision": "4dcbb028-67ea-4512-9cf9-338f216aa879"
+      "revision": "574a04c1-9b72-43d7-9428-00fdfb338f2c"
     },
     "retainedRevisions": [
+      "574a04c1-9b72-43d7-9428-00fdfb338f2c",
       "4dcbb028-67ea-4512-9cf9-338f216aa879"
     ]
   },
